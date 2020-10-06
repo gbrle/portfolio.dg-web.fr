@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/animate.css">
+    <link rel="stylesheet" href="/assets/css/cardsCompetences.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
 
     <title>David Gabriele - Développeur web Lyon</title>
 </head>
@@ -20,77 +22,116 @@
 </div>
 
  <!-- Content Page -->
-    <div class="content container-fluid p-5">
-        <img id="imageBackground" class="backgroundHome animate__animated animate__bounceInLeft img-fluid" src="/assets/images/developpeur-david-gariele-background.png">
-        <nav class="row">
-            <a href="{{ path('home') }}" class="col-md-4 text-nowrap">
-                <h1 class="bitterFont text-light text-uppercase">David <span class="colorOrange">Gabriele</span></h1>
-                <h2 class="text-light subTitleLogo">Développeur Web</h2>
-            </a>
-            <div class="col-md-8 text-right align-self-center secular text-uppercase display-5 text-light">
-                    <p id="menuPresentation" class="d-inline pl-3 pr-3 highlight menuCurrentSection" onclick="changePage(this.id)">Presentation</p>
-                    <p id="menuRealisations" class="d-inline pl-3 pr-3 highlight" onclick="changePage(this.id)">Realisations</p>
-                    <p id="menuCompetences" class="d-inline pl-3 pr-3 highlight" onclick="changePage(this.id)">Competences</p>
-                    <p id="menuContact" class="d-inline pl-3 pr-3 highlight" onclick="changePage(this.id)">Contact</p>
+    <div class="content container-fluid p-0 p-md-5">
+        <img id="burgerMenu" src="/assets/images/burger.png" class="burgerMenu" onclick="displayMenu()">
+
+        <img id="imageBackground" class="backgroundHome animate__animated animate__bounceInLeft w-50" src="/assets/images/developpeur-david-gariele-background.png">
+        <nav id="responsiveMenu" class="responsiveMenu row d-none d-md-block">
+
+{#            <a href="{{ path('home') }}" class="col-md-4 text-nowrap">#}
+{#                <h1 class="bitterFont text-light text-uppercase">David <span class="colorOrange">Gabriele</span></h1>#}
+{#                <h2 class="text-light subTitleLogo">Développeur Web</h2>#}
+{#            </a>#}
+            <div class="col-md-12 text-center align-self-center secular text-uppercase display-5 text-light">
+                <p id="menuPresentation" class="d-block d-md-inline pl-3 pr-3 highlight menuCurrentSection" onclick="changePage(this.id)">Presentation</p>
+                <p id="menuCompetences" class="d-block d-md-inline pl-3 pr-3 highlight" onclick="changePage(this.id)">Competences</p>
+                <p id="menuRealisations" class="d-block d-md-inline pl-3 pr-3 highlight" onclick="changePage(this.id)">Experience</p>
+                <p id="menuContact" class="d-block d-md-inline pl-3 pr-3 highlight" onclick="changePage(this.id)">Contact</p>
             </div>
         </nav>
 
 
         <section class="row pt-5 containerContent">
             <!-- SECTION PRESENTATION -->
-            <div id="menuPresentationSection" class="currentPage row animate__animated animate__backInRight currentSection">
-                <div class="col-12 col-md-4"></div>
-                <div class="col-12 col-md-8 contentPages">
-                    <h2 class="bitterFont display-3 text-light text-uppercase text-center mb-5">
+            <div id="menuPresentationSection" class="ml-0 mr-0 ml-md-5 mr-md-5 contentPages currentPage row animate__animated animate__backInLeft currentSection">
+                <div class="col-12 col-md-12 align-self-center">
+                    <h1 class="bitterFont display-3 text-light text-uppercase text-center">
                         David <span class="colorOrange">Gabriele</span>
+                    </h1>
+                    <h2 class="bitterFont display-4 text-light text-uppercase text-center mb-5">
+                        <span class="colorOrange">Développeur</span> Web
                     </h2>
 
-                    <p class="bitterFont display-5 text-light text-center">
-                        Développeur web sur Lyon spécialisé sur le framework "<strong class="highlightOrange">Symfony</strong>", je suis disponible pour un CDD / CDI sur Lyon ou Villeurbanne.
-                        Diplomé d'un BAC +2 en développement web et mobile à la <strong class="highlightOrange">Wild Code School</strong>
+                    <p class="RalewayFont display-5 text-light text-center col-md-12 offset-lg-2 col-lg-8 offset-lg-2 mb-5">
+                        Développeur web sur Lyon spécialisé sur le framework "<strong class="highlightOrangeStrong">Symfony</strong>", je suis disponible pour un CDD / CDI sur Lyon ou Villeurbanne.
+                        Diplomé d'un BAC +2 en développement web et mobile à la <strong class="highlightOrangeStrong">Wild Code School</strong>
+                    </p>
+                    <h3 class="bitterFont text-center text-light text-uppercase mt-5 mb-2">>> <strong class="highlightOrangeStrong">Q</strong>ui Suis-je ? <<</h3>
+                    <p class="RalewayFont display-6 text-light text-center col-md-12 offset-lg-2 col-lg-8 offset-lg-2">
+                        David 33 ans. Ancien restaurateur, j'ai entrepris ma reconversion en 2018. Je m'intéresse au multimédia et au
+                        <strong class="highlightOrangeStrong">développement web</strong> depuis mes 17 ans et développe des sites web pour
+                        particuliers de manière <strong class="highlightOrangeStrong">autodidacte</strong>.
+                        <br>
+                        <br>
+                        Je termine ma formation au campus "<strong class="highlightOrangeStrong">Wild Code School</strong>" en 2018 et obtiens le titre de développeur web & mobile niveau 3.
+                        <br>
+                        Une expérience professionnelle dans le domaine du RGPD, plus précisément sur le CRM de l'activité et sur la création de plusieurs sites vitrines à la demande de divers clients, me forme d'avantage à l'univers du web.
+                        <br>
+                        <br>
+                        Je propose aujourd'hui mes services et mets à disposition mes qualités de développeur <strong class="highlightOrangeStrong">passionné et rigoureux</strong>.
                     </p>
                 </div>
             </div>
 
             <!-- SECTION REALISATIONS -->
-            <div id="menuRealisationsSection" class="row animate__animated animate__backInRight d-none">
-                <div class="col-12 col-md-4"></div>
-                <div class="col-12 col-md-8 contentPages">
-                    <h2 class="bitterFont display-3 text-light text-uppercase text-center mb-5">
-                        REALISATION
+            <div id="menuRealisationsSection" class="ml-0 mr-0 ml-md-5 mr-md-5 contentPages row animate__animated animate__backInLeft d-none">
+                <div class="col-12 col-md-12 align-self-center">
+                    <h1 class="bitterFont display-3 text-light text-uppercase text-center">
+                        David <span class="colorOrange">Gabriele</span>
+                    </h1>
+                    <h2 class="bitterFont display-4 text-light text-uppercase text-center mb-5">
+                        <span class="colorOrange">Développeur</span> Web
                     </h2>
 
-                    <p class="bitterFont display-5 text-light text-center">
-                        Développeur web sur Lyon spécialisé sur le framework "<strong class="highlightOrange">Symfony</strong>", je suis disponible pour un CDD / CDI sur Lyon ou Villeurbanne.
-                        Diplomé d'un BAC +2 en développement web et mobile à la <strong class="highlightOrange">Wild Code School</strong>
+                    <p class="RalewayFont display-5 text-light text-center col-md-12 offset-lg-2 col-lg-8 offset-lg-2 mb-5">
+                        Développeur web sur Lyon spécialisé sur le framework "<strong class="highlightOrangeStrong">Symfony</strong>", je suis disponible pour un CDD / CDI sur Lyon ou Villeurbanne.
+                        Diplomé d'un BAC +2 en développement web et mobile à la <strong class="highlightOrangeStrong">Wild Code School</strong>
+                    </p>
+                    <h3 class="bitterFont text-center text-light text-uppercase mt-5 mb-2">>> <strong class="highlightOrangeStrong">Q</strong>ui Suis-je ? <<</h3>
+                    <p class="RalewayFont display-6 text-light text-center col-md-12 offset-lg-2 col-lg-8 offset-lg-2">
+                        David 33 ans. Ancien restaurateur, j'ai entrepris ma reconversion en 2018. Je m'intéresse au multimédia et au
+                        <strong class="highlightOrangeStrong">développement web</strong> depuis mes 17 ans et développe des sites web pour
+                        particuliers de manière <strong class="highlightOrangeStrong">autodidacte</strong>.
+                        <br>
+                        <br>
+                        Je termine ma formation au campus "<strong class="highlightOrangeStrong">Wild Code School</strong>" en 2018 et obtiens le titre de développeur web & mobile niveau 3.
+                        <br>
+                        Une expérience professionnelle dans le domaine du RGPD, plus précisément sur le CRM de l'activité et sur la création de plusieurs sites vitrines à la demande de divers clients, me forme d'avantage à l'univers du web.
+                        <br>
+                        <br>
+                        Je propose aujourd'hui mes services et mets à disposition mes qualités de développeur <strong class="highlightOrangeStrong">passionné et rigoureux</strong>.
                     </p>
                 </div>
             </div>
 
             <!-- SECTION COMPETENCES -->
-            <div id="menuCompetencesSection" class="row animate__animated animate__backInRight d-none">
-                <div class="col-12 col-md-4"></div>
-                <div class="col-12 col-md-8 contentPages">
-                    <h2 class="bitterFont display-3 text-light text-uppercase text-center mb-5">
-                        COMPETENCES
+            <div id="menuCompetencesSection" class="ml-0 mr-0 ml-md-5 mr-md-5 contentPages row animate__animated animate__backInLeft d-none">
+                <div class="col-12 col-md-12 align-self-center">
+
+                    <h2 class="bitterFont display-4 text-light text-uppercase text-center mb-5">
+                        <span class="colorOrange">C</span>ompétences
                     </h2>
 
-                    <p class="bitterFont display-5 text-light text-center">
-                        Développeur web sur Lyon spécialisé sur le framework "<strong class="highlightOrange">Symfony</strong>", je suis disponible pour un CDD / CDI sur Lyon ou Villeurbanne.
-                        Diplomé d'un BAC +2 en développement web et mobile à la <strong class="highlightOrange">Wild Code School</strong>
+                    <p class="RalewayFont display-5 text-light text-center col-md-12 offset-lg-2 col-lg-8 offset-lg-2 mb-5">
+                        Je me forme au quotidien à de nouvelles technologies. Chaque problème rencontré est un plus en savoir faire.
+                        Ouvert à toute nouvelles technologies, l'apprentissage ne me fait pas peur.
                     </p>
+                    <div class="container text-center mb-5">
+                        <img src="/assets/images/backgroundCompetences.png" class="img-fluid">
+                    </div>
+
                 </div>
             </div>
 
             <!-- SECTION CONTACT -->
-            <div id="menuContactSection" class="row animate__animated animate__backInRight d-none">
-                <div class="col-12 col-md-4"></div>
-                <div class="col-12 col-md-8 contentPages">
+            <div id="menuContactSection" class="ml-0 mr-0 ml-md-5 mr-md-5 contentPages row animate__animated animate__backInLeft d-none">
+                <div class="col-12 col-md-12 align-self-center">
+
                     <h2 class="bitterFont display-3 text-light text-uppercase text-center mb-5">
                         CONTACT
                     </h2>
 
-                    <p class="bitterFont display-5 text-light text-center">
+                    <p class="bitterFont display-5 text-light text-center col-md-12 offset-lg-2 col-lg-8 offset-lg-2">
                         Développeur web sur Lyon spécialisé sur le framework "<strong class="highlightOrange">Symfony</strong>", je suis disponible pour un CDD / CDI sur Lyon ou Villeurbanne.
                         Diplomé d'un BAC +2 en développement web et mobile à la <strong class="highlightOrange">Wild Code School</strong>
                     </p>

@@ -4,6 +4,11 @@ Import Fonts
 @import url("https://fonts.googleapis.com/css?family=Bitter:700");
 @import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+
+a:hover{
+    color: #cb875f;
+}
 /* ==========================>>>
 Titles / Sub Title
 =============================>>> */
@@ -16,11 +21,14 @@ Titles / Sub Title
 Colors
 =============================>>> */
 .colorOrange{
-    color: #fd7e14;
+    color: #cb875f;
 }
 /* ==========================>>>
 Fonts
 =============================>>> */
+.RalewayFont{
+    font-family: 'Raleway', cursive;
+}
 .bitterFont{
     font-family: 'Bitter', cursive;
 }
@@ -36,27 +44,14 @@ Fonts
 /* ==========================>>>
 ScroolBar Style
 =============================>>> */
-.contentPages {
-    scroll-behavior: smooth;
-}
-.contentPages::-webkit-scrollbar {
-    width: 1rem;
-    background-color: white;
-}
-.contentPages::-webkit-scrollbar-thumb {
-    background: #fd7e14;
-}
-.contentPages {
-    scrollbar-color: #000 rgba(0,0,0,.15);
-    scrollbar-width: thin;
-}
+
 
 /* ==========================>>>
 Backgrounds
 =============================>>> */
 
 .menuCurrentSection{
-    border-bottom: 4px solid #fd7e14;
+    border-bottom: 4px solid #cb875f;
 }
 * {
     margin: 0;
@@ -107,7 +102,7 @@ body {
     top: -50%;
     left: 0;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #ffffff), to(#ffffff));
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #cb875f 75%, #ffffff 100%);
     -webkit-animation: run 7s 0s infinite;
     animation: run 7s 0s infinite;
     -webkit-animation-fill-mode: forwards;
@@ -158,15 +153,38 @@ Text Size
 .display-5{
     font-size: 24px;
 }
+.display-6{
+    font-size: 18px;
+}
 .containerContent{
-    height: 70vh;
+    height: 100vh;
 
 }
+
+
+
+
+
+/* scroll behavior on html */
+.contentPages {
+    scroll-behavior: smooth;
+}
+/* scrollbar styling non-standard version */
+.contentPages::-webkit-scrollbar {
+    width: 0;
+    background-color: rgba(0,0,0,.15);
+}
+.contentPages::-webkit-scrollbar-thumb {
+    background: #000;
+}
+/* scrollbar styling standard version */
+.contentPages {
+    scrollbar-color: #000 rgba(0,0,0,.15);
+    scrollbar-width: 0;
+}
 .contentPages{
-    position: relative;
-    height: 100%;
-    overflow: scroll;
-    overflow-x: hidden;
+    height: 95%;
+    overflow-y: scroll;
 }
 
 .logo{
@@ -212,7 +230,7 @@ Hover Text
     text-shadow: 0px 1px 0px black;
 }
 .highlight:hover::after {
-    background-color: #fd7e14;
+    background-color: #cb875f;
     height: 125%;
     width: 105%;
 }
@@ -220,6 +238,9 @@ Hover Text
 /* ==========================>>>
 Hover Text Orange
 =============================>>> */
+.highlightOrangeStrong {
+    color: #cb875f;
+}
 .highlightOrange {
     display: inline-block;
     -webkit-transition: color 250ms, text-shadow 250ms;
@@ -239,7 +260,7 @@ Hover Text Orange
     content: '';
     width: 100%;
     height: 4px;
-    background-color: #fd7e14;
+    background-color: #cb875f;
     -webkit-transition: all 250ms;
     transition: all 250ms;
 }
@@ -248,7 +269,35 @@ Hover Text Orange
     text-shadow: 0px 1px 0px black;
 }
 .highlightOrange:hover::after {
-    background-color: #fd7e14;
+    background-color: #cb875f;
     height: 115%;
     width: 105%;
+}
+.burgerMenu{
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em!important;
+    }
+    h2 {
+        font-size: 1.2em!important;
+    }
+    p{
+        font-size: 18px!important;
+    }
+    .burgerMenu{
+        display: block;
+    }
+    .responsiveMenu{
+        top: 70px;
+        right: 0;
+        background-color: rgba(0,0,0, 0.9);
+        z-index: 1000;
+        position: absolute;
+    }
 }
