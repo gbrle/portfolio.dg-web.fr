@@ -1,0 +1,254 @@
+/* ==========================>>>
+Import Fonts
+=============================>>> */
+@import url("https://fonts.googleapis.com/css?family=Bitter:700");
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+/* ==========================>>>
+Titles / Sub Title
+=============================>>> */
+.subTitleLogo{
+    position: relative;
+    top: -29px;
+    right: -79px;
+}
+/* ==========================>>>
+Colors
+=============================>>> */
+.colorOrange{
+    color: #fd7e14;
+}
+/* ==========================>>>
+Fonts
+=============================>>> */
+.bitterFont{
+    font-family: 'Bitter', cursive;
+}
+.sansitaFont{
+    font-family: 'Sansita Swashed', cursive;
+    line-height: 1.4;
+    word-spacing: 3px;
+    text-shadow: 0px 1px 0px white;
+}
+.secular{
+    font-family: 'Secular One', cursive;
+}
+/* ==========================>>>
+ScroolBar Style
+=============================>>> */
+.contentPages {
+    scroll-behavior: smooth;
+}
+.contentPages::-webkit-scrollbar {
+    width: 1rem;
+    background-color: white;
+}
+.contentPages::-webkit-scrollbar-thumb {
+    background: #fd7e14;
+}
+.contentPages {
+    scrollbar-color: #000 rgba(0,0,0,.15);
+    scrollbar-width: thin;
+}
+
+/* ==========================>>>
+Backgrounds
+=============================>>> */
+
+.menuCurrentSection{
+    border-bottom: 4px solid #fd7e14;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: #000;
+    line-height: 1.6;
+    position: relative;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+}
+.lines .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+.lines .line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #ffffff), to(#ffffff));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    -webkit-animation: run 7s 0s infinite;
+    animation: run 7s 0s infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.lines .line:nth-child(1) {
+    margin-left: -25%;
+}
+.lines .line:nth-child(1)::after {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.lines .line:nth-child(3) {
+    margin-left: 25%;
+}
+.lines .line:nth-child(3)::after {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+
+@-webkit-keyframes run {
+    0% {
+        top: -50%;
+    }
+    100% {
+        top: 110%;
+    }
+}
+
+@keyframes run {
+    0% {
+        top: -50%;
+    }
+    100% {
+        top: 110%;
+    }
+}
+
+.backgroundHome{
+    position: absolute;
+    bottom: 0;
+}
+/* ==========================>>>
+Text Size
+=============================>>> */
+.display-5{
+    font-size: 24px;
+}
+.containerContent{
+    height: 70vh;
+
+}
+.contentPages{
+    position: relative;
+    height: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.logo{
+
+-webkit-animation:spin 10s linear infinite;
+-moz-animation:spin 10s linear infinite;
+animation:spin 10s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+
+}
+/* ==========================>>>
+Hover Text
+=============================>>> */
+.highlight {
+    cursor: pointer;
+    display: inline-block;
+    -webkit-transition: color 250ms, text-shadow 250ms;
+    transition: color 250ms, text-shadow 250ms;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px white;
+    position: relative;
+    z-index: 0;
+}
+.highlight::after {
+    position: absolute;
+    z-index: -1;
+    bottom: -5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    content: '';
+    width: 100%;
+    height: 23px;
+    background-color: #343434;
+    -webkit-transition: all 250ms;
+    transition: all 250ms;
+}
+.highlight:hover {
+    color: white;
+    text-shadow: 0px 1px 0px black;
+}
+.highlight:hover::after {
+    background-color: #fd7e14;
+    height: 125%;
+    width: 105%;
+}
+
+/* ==========================>>>
+Hover Text Orange
+=============================>>> */
+.highlightOrange {
+    display: inline-block;
+    -webkit-transition: color 250ms, text-shadow 250ms;
+    transition: color 250ms, text-shadow 250ms;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px white;
+    position: relative;
+    z-index: 0;
+}
+.highlightOrange::after {
+    position: absolute;
+    z-index: -1;
+    bottom: -5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: #fd7e14;
+    -webkit-transition: all 250ms;
+    transition: all 250ms;
+}
+.highlightOrange:hover {
+    color: white;
+    text-shadow: 0px 1px 0px black;
+}
+.highlightOrange:hover::after {
+    background-color: #fd7e14;
+    height: 115%;
+    width: 105%;
+}

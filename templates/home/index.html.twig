@@ -1,20 +1,116 @@
-{% extends 'base.html.twig' %}
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-{% block title %}Hello HomeController!{% endblock %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/animate.css">
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/gbrle/Bureau/david-gabriele.fr/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/gbrle/Bureau/david-gabriele.fr/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
+    <title>David Gabriele - Développeur web Lyon</title>
+</head>
+<body>
+<div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
 </div>
-{% endblock %}
+
+ <!-- Content Page -->
+    <div class="content container-fluid p-5">
+        <img id="imageBackground" class="backgroundHome animate__animated animate__bounceInLeft img-fluid" src="/assets/images/developpeur-david-gariele-background.png">
+        <nav class="row">
+            <a href="{{ path('home') }}" class="col-md-4 text-nowrap">
+                <h1 class="bitterFont text-light text-uppercase">David <span class="colorOrange">Gabriele</span></h1>
+                <h2 class="text-light subTitleLogo">Développeur Web</h2>
+            </a>
+            <div class="col-md-8 text-right align-self-center secular text-uppercase display-5 text-light">
+                    <p id="menuPresentation" class="d-inline pl-3 pr-3 highlight menuCurrentSection" onclick="changePage(this.id)">Presentation</p>
+                    <p id="menuRealisations" class="d-inline pl-3 pr-3 highlight" onclick="changePage(this.id)">Realisations</p>
+                    <p id="menuCompetences" class="d-inline pl-3 pr-3 highlight" onclick="changePage(this.id)">Competences</p>
+                    <p id="menuContact" class="d-inline pl-3 pr-3 highlight" onclick="changePage(this.id)">Contact</p>
+            </div>
+        </nav>
+
+
+        <section class="row pt-5 containerContent">
+            <!-- SECTION PRESENTATION -->
+            <div id="menuPresentationSection" class="currentPage row animate__animated animate__backInRight currentSection">
+                <div class="col-12 col-md-4"></div>
+                <div class="col-12 col-md-8 contentPages">
+                    <h2 class="bitterFont display-3 text-light text-uppercase text-center mb-5">
+                        David <span class="colorOrange">Gabriele</span>
+                    </h2>
+
+                    <p class="bitterFont display-5 text-light text-center">
+                        Développeur web sur Lyon spécialisé sur le framework "<strong class="highlightOrange">Symfony</strong>", je suis disponible pour un CDD / CDI sur Lyon ou Villeurbanne.
+                        Diplomé d'un BAC +2 en développement web et mobile à la <strong class="highlightOrange">Wild Code School</strong>
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION REALISATIONS -->
+            <div id="menuRealisationsSection" class="row animate__animated animate__backInRight d-none">
+                <div class="col-12 col-md-4"></div>
+                <div class="col-12 col-md-8 contentPages">
+                    <h2 class="bitterFont display-3 text-light text-uppercase text-center mb-5">
+                        REALISATION
+                    </h2>
+
+                    <p class="bitterFont display-5 text-light text-center">
+                        Développeur web sur Lyon spécialisé sur le framework "<strong class="highlightOrange">Symfony</strong>", je suis disponible pour un CDD / CDI sur Lyon ou Villeurbanne.
+                        Diplomé d'un BAC +2 en développement web et mobile à la <strong class="highlightOrange">Wild Code School</strong>
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION COMPETENCES -->
+            <div id="menuCompetencesSection" class="row animate__animated animate__backInRight d-none">
+                <div class="col-12 col-md-4"></div>
+                <div class="col-12 col-md-8 contentPages">
+                    <h2 class="bitterFont display-3 text-light text-uppercase text-center mb-5">
+                        COMPETENCES
+                    </h2>
+
+                    <p class="bitterFont display-5 text-light text-center">
+                        Développeur web sur Lyon spécialisé sur le framework "<strong class="highlightOrange">Symfony</strong>", je suis disponible pour un CDD / CDI sur Lyon ou Villeurbanne.
+                        Diplomé d'un BAC +2 en développement web et mobile à la <strong class="highlightOrange">Wild Code School</strong>
+                    </p>
+                </div>
+            </div>
+
+            <!-- SECTION CONTACT -->
+            <div id="menuContactSection" class="row animate__animated animate__backInRight d-none">
+                <div class="col-12 col-md-4"></div>
+                <div class="col-12 col-md-8 contentPages">
+                    <h2 class="bitterFont display-3 text-light text-uppercase text-center mb-5">
+                        CONTACT
+                    </h2>
+
+                    <p class="bitterFont display-5 text-light text-center">
+                        Développeur web sur Lyon spécialisé sur le framework "<strong class="highlightOrange">Symfony</strong>", je suis disponible pour un CDD / CDI sur Lyon ou Villeurbanne.
+                        Diplomé d'un BAC +2 en développement web et mobile à la <strong class="highlightOrange">Wild Code School</strong>
+                    </p>
+                </div>
+            </div>
+
+
+
+        </section>
+        
+    </div>
+    <!-- End Content Page -->
+
+
+
+    <!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script rel="script" src="/assets/js/main.js"></script>
+</body>
+</html>
