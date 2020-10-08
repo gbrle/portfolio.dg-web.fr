@@ -282,13 +282,13 @@
             <div id="menuContactSection" class="col-12 ml-0 mr-0 pl-md-5 pr-md-5 contentPages row animate__animated animate__backInLeft d-none">
                 <div class="col-12 col-md-12 mb-5 pb-5 pt-5 pt-md-0">
 
-                    <h2 class="bitterFont display-3 text-light text-uppercase text-center mb-5">
+                    <h2 id="titleContact" class="bitterFont display-3 text-light text-uppercase text-center mb-5 animate__animated">
                         <span class=highlightOrangeStrong>C</span>ONTACT
                     </h2>
-                    <p class="RalewayFont display-5 text-light text-center col-md-12 offset-lg-2 col-lg-8 offset-lg-2">
+                    <p id="secondTitleContact" class="RalewayFont display-5 text-light text-center col-md-12 offset-lg-2 col-lg-8 offset-lg-2 animate__animated">
                         Laissez-moi votre message et vos coordonnées, je vous répondrai dans les plus brefs délais.
                     </p>
-                    <div class="col-12 offset-0 offset-xl-3 col-xl-6 offset-0 offset-xl-3 wrapper">
+                    <div id="messageTextArea" class="col-12 offset-0 offset-xl-3 col-xl-6 offset-0 offset-xl-3 wrapper animate__animated">
                         <div class="cmd">
                             <p id="counterBlock" class="counterBlock"></p>
 
@@ -298,13 +298,17 @@
                     </div>
 
                     <!-- Captcha input -->
-                    <div class="col-12 offset-0 offset-xl-3 col-xl-6 offset-0 offset-xl-3 wrapperCaptcha">
+                    <div id="captchaArea" class="col-12 offset-0 offset-xl-3 col-xl-6 offset-0 offset-xl-3 wrapperCaptcha animate__animated">
                         <div class="cmdCaptcha">
                             <div class="title-barCaptcha">Captcha (Entrez la chaîne de caractère) : <span><img class="img-fluid rounded" src="{{ path('captcha') }}"></span></div>
                             <textarea id="captchaContact" spellcheck="false" class="text-center textareaCaptcha text-light bg-dark animate__animated" placeholder="Entrez le code"></textarea>
                         </div>
                         <button onclick="sendMailContact()" type="button" class="btn btn-subMail mt-5 text-uppercase text-light w-100">Envoyer</button>
                     </div>
+
+                    <h2 id="confirmSendMail" class="highlightOrangeStrong bitterFont display-3 text-uppercase text-center mb-5 d-none animate__animated animate__backInLeft" style="color: #cb875f;">
+                        Le message a bien été envoyé !
+                    </h2>
                 </div>
             </div>
 
@@ -398,8 +402,25 @@
         data.message = messsageUser;
         data.captcha = captchaUser;
 
+        // Je retire mon formulaire
+        document.getElementById('messageTextArea').classList.add('animate__backOutLeft')
+        document.getElementById('captchaArea').classList.add('animate__backOutLeft')
+        document.getElementById('titleContact').classList.add('animate__backOutLeft')
+        document.getElementById('secondTitleContact').classList.add('animate__backOutLeft')
+
+
         ajaxPost('/mail', JSON.stringify(data), function (){
-            // Je retire mon formulaire
+
+
+            setTimeout(function(){
+                    document.getElementById('messageTextArea').classList.add('d-none')
+                    document.getElementById('captchaArea').classList.add('d-none')
+
+                    document.getElementById('confirmSendMail').classList.remove('d-none')
+
+
+                }
+                , 1000);
                 // J'affiche un message de confirmation d'envoi
         })
     }

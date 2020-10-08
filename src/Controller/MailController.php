@@ -23,7 +23,7 @@ class MailController extends AbstractController
         // J'envois mon mail
         $mailer->sendMail(
             'Contact sur dg-web',
-            $message,
+            strip_tags($message),
             "mailTemplate/mail.html.twig"
         );
 
