@@ -405,14 +405,17 @@
         document.getElementById('secondTitleContact').classList.add('animate__backOutLeft')
 
 
-        ajaxPost('/mail', JSON.stringify(data), function (){
+        ajaxPost('/mail', JSON.stringify(data), function (response){
 
 
             setTimeout(function(){
                     document.getElementById('messageTextArea').classList.add('d-none')
                     document.getElementById('captchaArea').classList.add('d-none')
 
+                    // j'assigne mon message d'erreur
+                    document.getElementById('confirmSendMail').innerText = response
                     document.getElementById('confirmSendMail').classList.remove('d-none')
+
 
 
                 }
