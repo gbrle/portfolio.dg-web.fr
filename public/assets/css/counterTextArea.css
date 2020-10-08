@@ -1,0 +1,17 @@
+.counterBlock{
+    z-index: 100000;
+    position: absolute;
+    bottom: 1px;
+    right: 12px;
+    color: red;
+    margin: 0
+}
+.red {
+    color : #ff0000 !important;
+}
+p#counterBlock {
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top:7px
+}

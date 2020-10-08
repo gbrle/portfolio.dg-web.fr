@@ -1,5 +1,4 @@
 // Burger Menu Action
-let burgerIcon = document.getElementById('burgerMenu')
 let menuResponsive = document.getElementById("responsiveMenu")
 // Function Burger Menu Display
 function displayMenu(){
@@ -11,6 +10,9 @@ let imageBackground = document.getElementById('imageBackground')
 
 // On click, change color of menu
 function changePage(idItemMenu){
+    menuResponsive.classList.add('d-none')
+
+
     let menuCurrentSection = document.getElementsByClassName('menuCurrentSection')[0]
     let selectedSection = document.getElementById(idItemMenu)
     let currentPage = document.getElementsByClassName('currentPage')[0]

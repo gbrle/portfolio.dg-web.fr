@@ -1,0 +1,58 @@
+.center {
+    position: fixed;
+    z-index: 100000;
+    top: 15px;
+}
+
+#social-test {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 30px;
+}
+#social-test h2 {
+    color: #fff;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    font-weight: 100;
+}
+#social-test .social {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 0px;
+}
+#social-test li {
+    background-color: black;
+    color: rgba(167, 146, 129, 0.6);
+    list-style-type: none;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding: 1%;
+    border: 1px solid rgba(167, 146, 129, 0.4);
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    transition: ease 0.3s;
+}
+#social-test li:hover {
+    color: #a79281;
+    border: 1px solid #a79281;
+}
+.social:hover > li {
+    opacity: 0.5;
+}
+.social:hover > li:hover {
+    opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+    #social-test .social {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-left: 0px;
+    }
+}
