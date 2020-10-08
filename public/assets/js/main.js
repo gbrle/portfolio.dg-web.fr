@@ -4,13 +4,11 @@ let burgerMenu = document.getElementById('burgerMenu');
 // Function Burger Menu Display
 function displayMenu(){
     burgerMenu.classList.add('animate__flip')
-    menuResponsive.classList.add('animate__backInDown')
     menuResponsive.classList.remove('d-none')
     // Je retire l'effet sur le burger
     setTimeout(function()
         {
             burgerMenu.classList.remove('animate__flip')
-            menuResponsive.classList.remove('animate__backInDown')
         }
         , 1000);
 }
@@ -18,16 +16,9 @@ function displayMenu(){
 //get Image Background
 let imageBackground = document.getElementById('imageBackground')
 
-// Change Page logic
+// On click, change color of menu
 function changePage(idItemMenu){
-    menuResponsive.classList.add('animate__backOutUp')
-
-    setTimeout(function()
-        {
-            menuResponsive.classList.remove('animate__backOutUp')
-            menuResponsive.classList.add('d-none')
-        }
-        , 1000);
+    menuResponsive.classList.add('d-none')
 
 
     let menuCurrentSection = document.getElementsByClassName('menuCurrentSection')[0]
