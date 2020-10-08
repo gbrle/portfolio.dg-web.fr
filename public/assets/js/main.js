@@ -1,16 +1,33 @@
 // Burger Menu Action
 let menuResponsive = document.getElementById("responsiveMenu")
+let burgerMenu = document.getElementById('burgerMenu');
 // Function Burger Menu Display
 function displayMenu(){
+    burgerMenu.classList.add('animate__flip')
+    menuResponsive.classList.add('animate__backInDown')
     menuResponsive.classList.remove('d-none')
+    // Je retire l'effet sur le burger
+    setTimeout(function()
+        {
+            burgerMenu.classList.remove('animate__flip')
+            menuResponsive.classList.remove('animate__backInDown')
+        }
+        , 1000);
 }
 
 //get Image Background
 let imageBackground = document.getElementById('imageBackground')
 
-// On click, change color of menu
+// Change Page logic
 function changePage(idItemMenu){
-    menuResponsive.classList.add('d-none')
+    menuResponsive.classList.add('animate__backOutUp')
+
+    setTimeout(function()
+        {
+            menuResponsive.classList.remove('animate__backOutUp')
+            menuResponsive.classList.add('d-none')
+        }
+        , 1000);
 
 
     let menuCurrentSection = document.getElementsByClassName('menuCurrentSection')[0]
