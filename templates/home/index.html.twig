@@ -31,6 +31,7 @@
 
 </head>
 <body>
+<!-- Background home -->
 <div class="lines">
     <div class="line"></div>
     <div class="line"></div>
@@ -51,15 +52,10 @@
 
  <!-- Content Page -->
     <div class="content container-fluid p-0 p-md-5">
-        <img id="burgerMenu" src="/assets/images/burger.png" class="burgerMenu" onclick="displayMenu()">
+        <img alt="burger" id="burgerMenu" src="/assets/images/burger.png" class="burgerMenu" onclick="displayMenu()">
 
-        <img id="imageBackground" class="backgroundHome animate__animated animate__bounceInLeft w-50" src="/assets/images/developpeur-david-gariele-background.png">
+        <img alt="David Gabriele background" id="imageBackground" class="backgroundHome animate__animated animate__bounceInLeft w-50" src="/assets/images/developpeur-david-gariele-background.png">
         <nav id="responsiveMenu" class="responsiveMenu row d-none d-md-block">
-
-{#            <a href="{{ path('home') }}" class="col-md-4 text-nowrap">#}
-{#                <h1 class="bitterFont text-light text-uppercase">David <span class="colorOrange">Gabriele</span></h1>#}
-{#                <h2 class="text-light subTitleLogo">Développeur Web</h2>#}
-{#            </a>#}
             <div class="col-md-12 text-center align-self-center secular text-uppercase display-5 text-light">
                 <p id="menuPresentation" class="d-block d-md-inline pl-3 pr-3 highlight menuCurrentSection" onclick="changePage(this.id)">Presentation</p>
                 <p id="menuCompetences" class="d-block d-md-inline pl-3 pr-3 highlight" onclick="changePage(this.id)">Competences</p>
@@ -115,7 +111,7 @@
                         <div class="timeline__item experienceCard">
                             <a href="https://spinandgogo.com/" target="_blank">
                                 <h3 class="timeline__title text-uppercase">Spin and gogo</h3>
-                                <img src="/assets/images/experiencesImages/spinandgogo.jpg" class="img-timeLine">
+                                <img alt="Site Spin and gogo Dg Web" src="/assets/images/experiencesImages/spinandgogo.jpg" class="img-timeLine">
                                 <p class="timeline__blurb mt-3">
                                     Projet personnel visant la communauté poker. (VERSION BETA)
                                     <br>
@@ -141,7 +137,7 @@
                         <div class="timeline__item experienceCard">
                             <a href="https://rfblabstudio.fr/" target="_blank">
                                 <h3 class="timeline__title text-uppercase">rfb lab studio</h3>
-                                <img src="/assets/images/experiencesImages/rfblabstudio.png" class="img-timeLine">
+                                <img alt="Site RFB Lab Studio David Gabriele" src="/assets/images/experiencesImages/rfblabstudio.png" class="img-timeLine">
                                 <p class="timeline__blurb mt-3">
                                     Confection d'un site vitrine représentant un ingénieur du son. Celui-ci a pour but de mettre en avant
                                     son activité. Création d'un panel admin personnalisé avec gestion de news (Création et gestion).
@@ -161,7 +157,7 @@
                         <div class="timeline__item experienceCard">
                             <a href="#" target="_blank">
                                 <h3 class="timeline__title text-uppercase">sport event flyers</h3>
-                                <img src="/assets/images/experiencesImages/sporteventflyers.png" class="img-timeLine">
+                                <img alt="Site Sport Event Flyers Dg Web" src="/assets/images/experiencesImages/sporteventflyers.png" class="img-timeLine">
                                 <p class="timeline__blurb mt-3">
                                     Projet personnel dont l'utilité est la génération de flyers d'évenements football.
                                     <br><br>
@@ -188,7 +184,7 @@
                         <div class="timeline__item experienceCard">
                             <a href="http://www.france-isolation-gratuit.com/" target="_blank">
                                 <h3 class="timeline__title text-uppercase">france isolation</h3>
-                                <img src="/assets/images/experiencesImages/france-isolation.png" class="img-timeLine">
+                                <img alt="Site France Isolation David Gabriele" src="/assets/images/experiencesImages/france-isolation.png" class="img-timeLine">
                                 <p class="timeline__blurb mt-3">
                                     Création d'un site vitrine représentant l'activité du client.
 
@@ -204,7 +200,7 @@
                         <div class="timeline__item experienceCard">
                             <a href="https://www.i-dpo.com/" target="_blank">
                                 <h3 class="timeline__title text-uppercase">Stage IDPO</h3>
-                                <img src="/assets/images/experiencesImages/idpo.png" class="img-timeLine">
+                                <img alt="Stage chez IDPO de David Gabriele" src="/assets/images/experiencesImages/idpo.png" class="img-timeLine">
                                 <p class="timeline__blurb mt-3">
                                     Stage en entreprise d'une durée de 2 mois.
 
@@ -223,7 +219,7 @@
                         <div class="timeline__item experienceCard">
                             <a href="https://www.wildcodeschool.com/fr-FR" target="_blank">
                                 <h3 class="timeline__title text-uppercase">WILD CODE SCHOOL</h3>
-                                <img src="/assets/images/experiencesImages/wild.png" class="img-timeLine">
+                                <img alt="Wild Code School" src="/assets/images/experiencesImages/wild.png" class="img-timeLine">
                                 <p class="timeline__blurb mt-3">
                                     Formation en campus d'une durée de 5 mois. Diplome Développeur Web & Mobile équivalent BAC + 2 obtenu.
                                     <br><br>
@@ -272,7 +268,7 @@
                         Ouvert à toute nouvelles technologies, l'apprentissage ne me fait pas peur.
                     </p>
                     <div class="container text-center  pb-5 mb-5">
-                        <img src="/assets/images/backgroundCompetences.png" class="img-fluid">
+                        <img alt="David Gabriele Background compétences" src="/assets/images/backgroundCompetences.png" class="img-fluid">
                     </div>
 
                 </div>
@@ -300,7 +296,7 @@
                     <!-- Captcha input -->
                     <div id="captchaArea" class="col-12 offset-0 offset-xl-3 col-xl-6 offset-0 offset-xl-3 wrapperCaptcha animate__animated">
                         <div class="cmdCaptcha">
-                            <div class="title-barCaptcha">Captcha (Entrez la chaîne de caractère) : <span><img class="img-fluid rounded" src="{{ path('captcha') }}"></span></div>
+                            <div class="title-barCaptcha">Captcha (Entrez la chaîne de caractère) : <span><img alt="captcha dg web" class="img-fluid rounded" src="{{ path('captcha') }}"></span></div>
                             <textarea id="captchaContact" spellcheck="false" class="text-center textareaCaptcha text-light bg-dark animate__animated" placeholder="Entrez le code"></textarea>
                         </div>
                         <button onclick="sendMailContact()" type="button" class="btn btn-subMail mt-5 text-uppercase text-light w-100">Envoyer</button>
