@@ -1,0 +1,23 @@
+/* Date button */
+.dateExperience{
+    border-radius: 10px;
+    cursor: pointer;
+}
+.dateExperience:hover{
+    color: #cb875f;
+}
+
+/* Div TimeLineByDate */
+.timeLineByDate{
+    -webkit-animation: fadeAnimation 0.5s;
+    overflow: hidden;
+}
+/* Animation TimeLineByDate */
+@-webkit-keyframes fadeAnimation {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 500px;
+    }
+}

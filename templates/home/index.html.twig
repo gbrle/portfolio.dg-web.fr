@@ -29,11 +29,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/animate.css">
-    <link rel="stylesheet" href="/assets/css/cardsCompetences.css">
     <link rel="stylesheet" href="/assets/css/contactForm.css">
     <link rel="stylesheet" href="/assets/css/timeLine.css">
     <link rel="stylesheet" href="/assets/css/socialsMedias.css">
     <link rel="stylesheet" href="/assets/css/counterTextArea.css">
+    <link rel="stylesheet" href="/assets/css/experiences.css">
     <link rel="stylesheet" href="/assets/css/competencesText.css">
 
 </head>
@@ -105,156 +105,174 @@
             </div>
 
             <!-- SECTION REALISATIONS -->
-            <div id="menuRealisationsSection" class="col-12 ml-0 mr-0 pl-md-5 pr-md-5 contentPages row animate__animated animate__backInLeft d-none">
+            <div id="menuRealisationsSection" class="col-12 ml-0 mr-0 pl-md-5 pr-md-5 p-5 mb-5 contentPages row animate__animated animate__backInLeft d-none">
                 <div class="col-12 col-md-12 mb-5 pb-5 pt-5 pt-md-0">
                     <h1 class="bitterFont display-3 text-light text-uppercase text-center">
                         <span class="colorOrange">E</span>xpériences
                     </h1>
 
+                    <p class="RalewayFont display-5 text-light text-center col-md-12 offset-lg-2 col-lg-8 offset-lg-2 mb-5">
+                        Mes diplômes et certificats s'accompagnent d'une pratique <strong class="highlightOrangeStrong">autodidacte</strong> prononcée. En effet les clients
+                        que j'ai pu gérer en amont et en parallèle m'ont permis d'acquérir de l'<strong class="highlightOrangeStrong">expérience</strong> et de l'<strong class="highlightOrangeStrong">autonomie</strong>.
+                        Des projets personnels et en cours requièrent l'<strong class="highlightOrangeStrong">autoformation</strong> sur de nouvelles technologies telles que
+                        "REACT.JS" sur laquelle je me forme actuellement.
+                    </p>
+                    <p class="RalewayFont display-5 text-light text-center col-md-12 offset-lg-2 col-lg-8 offset-lg-2 mb-5">
+                        [ <span class="highlightOrangeStrong">Cliquer sur la date pour dérouler</span> ]
+                    </p>
+
                     <div class="timeline">
 
-                        <h2 class="timeline__item timeline__item--year">2020</h2>
+                        <h2 id="2020" class="timeline__item timeline__item--year dateExperience" onclick="experienceDate(this.id)">2020</h2>
 
-                        <div class="timeline__item experienceCard">
-                            <a href="https://spinandgogo.com/" target="_blank">
-                                <h3 class="timeline__title text-uppercase">Spin and gogo</h3>
-                                <img alt="Site Spin and gogo Dg Web" src="/assets/images/experiencesImages/spinandgogo.jpg" class="img-timeLine">
-                                <p class="timeline__blurb mt-3">
-                                    Projet personnel visant la communauté poker. (VERSION BETA)
-                                    <br>
-                                    Plateforme web dont l'utilité est d'avoir accès à ses statistiques poker en temps réel.
-                                    <br><br>
-                                    Développement de l'application dans son intégralité.
-                                    <br>
-                                    - CRM Admin
-                                    <br>
-                                    - Système d'inscription complet
-                                    <br>
-                                    - Front / Back
-                                    <br>
-                                    - User Interface
-                                    <br><br>
-                                    Technos utilisées :
+                        <div id="timeLine2020" class="d-none timeLineByDate">
+                            <div class="timeline__item experienceCard ">
+                                <a href="https://spinandgogo.com/" target="_blank">
+                                    <h3 class="timeline__title text-uppercase">Spin and gogo</h3>
+                                    <img alt="Site Spin and gogo Dg Web" src="/assets/images/experiencesImages/spinandgogo.jpg" class="img-timeLine">
+                                    <p class="timeline__blurb mt-3">
+                                        Projet personnel visant la communauté poker. (VERSION BETA)
+                                        <br>
+                                        Plateforme web dont l'utilité est d'avoir accès à ses statistiques poker en temps réel.
+                                        <br><br>
+                                        Développement de l'application dans son intégralité.
+                                        <br>
+                                        - CRM Admin
+                                        <br>
+                                        - Système d'inscription complet
+                                        <br>
+                                        - Front / Back
+                                        <br>
+                                        - User Interface
+                                        <br><br>
+                                        Technos utilisées :
 
-                                    SYMFONY 5.1 / PHP  / JAVASCRIPT
-                                </p>
-                            </a>
+                                        SYMFONY 5.1 / PHP  / JAVASCRIPT
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="timeline__item experienceCard">
+                                <a href="https://rfblabstudio.fr/" target="_blank">
+                                    <h3 class="timeline__title text-uppercase">rfb lab studio</h3>
+                                    <img alt="Site RFB Lab Studio David Gabriele" src="/assets/images/experiencesImages/rfblabstudio.png" class="img-timeLine">
+                                    <p class="timeline__blurb mt-3">
+                                        Confection d'un site vitrine représentant un ingénieur du son. Celui-ci a pour but de mettre en avant
+                                        son activité. Création d'un panel admin personnalisé avec gestion de news (Création et gestion).
+                                        <br><br>
+                                        Gestion du client et du projet dans sa totalité.
+                                        <br><br>
+                                        Technos utilisées :
+
+                                        SYMFONY 4.4 / PHP  / JAVASCRIPT
+                                    </p>
+                                </a>
+                            </div>
+
                         </div>
 
-                        <div class="timeline__item experienceCard">
-                            <a href="https://rfblabstudio.fr/" target="_blank">
-                                <h3 class="timeline__title text-uppercase">rfb lab studio</h3>
-                                <img alt="Site RFB Lab Studio David Gabriele" src="/assets/images/experiencesImages/rfblabstudio.png" class="img-timeLine">
-                                <p class="timeline__blurb mt-3">
-                                    Confection d'un site vitrine représentant un ingénieur du son. Celui-ci a pour but de mettre en avant
-                                    son activité. Création d'un panel admin personnalisé avec gestion de news (Création et gestion).
-                                    <br><br>
-                                    Gestion du client et du projet dans sa totalité.
-                                    <br><br>
-                                    Technos utilisées :
+                        <h2 id="2019" class="timeline__item timeline__item--year dateExperience" onclick="experienceDate(this.id)">2019</h2>
 
-                                    SYMFONY 4.4 / PHP  / JAVASCRIPT
-                                </p>
-                            </a>
+                        <div id="timeLine2019" class="timeLineByDate d-none">
+                            <div class="timeline__item experienceCard">
+                                <a href="#" target="_blank">
+                                    <h3 class="timeline__title text-uppercase">sport event flyers</h3>
+                                    <img alt="Site Sport Event Flyers Dg Web" src="/assets/images/experiencesImages/sporteventflyers.png" class="img-timeLine">
+                                    <p class="timeline__blurb mt-3">
+                                        Projet personnel dont l'utilité est la génération de flyers d'évenements football.
+                                        <br><br>
+                                        Celle-ci a pour but de générer des annonces des prochains matchs de football diffusés dans
+                                        les bars sous format image (réseaux sociaux).
+                                        <br><br>
+                                        Développement de l'application dans son intégralité,
+                                        <br>
+                                        - Front / Back
+                                        <br>
+                                        - Utilisation d'une API
+                                        <br>
+                                        - Création d'une API
+                                        <br>
+                                        - CRM Gestion de l'application
+                                        <br><br>
+                                        Technos utilisées :
+
+                                        SYMFONY 4.4 / PHP (librarie "GD") / JAVASCRIPT / API
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="timeline__item experienceCard">
+                                <a href="http://www.france-isolation-gratuit.com/" target="_blank">
+                                    <h3 class="timeline__title text-uppercase">france isolation</h3>
+                                    <img alt="Site France Isolation David Gabriele" src="/assets/images/experiencesImages/france-isolation.png" class="img-timeLine">
+                                    <p class="timeline__blurb mt-3">
+                                        Création d'un site vitrine représentant l'activité du client.
+
+                                        Ce site a pour but de récolter des "leads" afin de les démarcher par la suite.
+                                        <br><br>
+                                        Technos utilisées :
+
+                                        HTML / CSS / PHP
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="timeline__item experienceCard">
+                                <a href="https://www.i-dpo.com/" target="_blank">
+                                    <h3 class="timeline__title text-uppercase">Stage IDPO</h3>
+                                    <img alt="Stage chez IDPO de David Gabriele" src="/assets/images/experiencesImages/idpo.png" class="img-timeLine">
+                                    <p class="timeline__blurb mt-3">
+                                        Stage en entreprise d'une durée de 2 mois.
+
+                                        Secteur d'activité dans le domaine du RGPD, j'ai pu travailler sur le CRM de l'entreprise qui a
+                                        pour but de gérer la clientèle. Travail avec la collaboration d'un développeur plus expérimenté (à distance).
+                                        <br><br>
+                                        Technos utilisées :
+
+                                        SYMFONY 3.4
+                                    </p>
+                                </a>
+                            </div>
                         </div>
 
+                        <h2 id="2018" class="timeline__item timeline__item--year dateExperience" onclick="experienceDate(this.id)">2018</h2>
 
-                        <h2 class="timeline__item timeline__item--year">2019</h2>
-
-                        <div class="timeline__item experienceCard">
-                            <a href="#" target="_blank">
-                                <h3 class="timeline__title text-uppercase">sport event flyers</h3>
-                                <img alt="Site Sport Event Flyers Dg Web" src="/assets/images/experiencesImages/sporteventflyers.png" class="img-timeLine">
-                                <p class="timeline__blurb mt-3">
-                                    Projet personnel dont l'utilité est la génération de flyers d'évenements football.
-                                    <br><br>
-                                    Celle-ci a pour but de générer des annonces des prochains matchs de football diffusés dans
-                                    les bars sous format image (réseaux sociaux).
-                                    <br><br>
-                                    Développement de l'application dans son intégralité,
-                                    <br>
-                                    - Front / Back
-                                    <br>
-                                    - Utilisation d'une API
-                                    <br>
-                                    - Création d'une API
-                                    <br>
-                                    - CRM Gestion de l'application
-                                    <br><br>
-                                    Technos utilisées :
-
-                                    SYMFONY 4.4 / PHP (librarie "GD") / JAVASCRIPT / API
-                                </p>
-                            </a>
+                        <div id="timeLine2018" class="timeLineByDate d-none">
+                            <div class="timeline__item experienceCard">
+                                <a href="https://www.wildcodeschool.com/fr-FR" target="_blank">
+                                    <h3 class="timeline__title text-uppercase">WILD CODE SCHOOL</h3>
+                                    <img alt="Wild Code School" src="/assets/images/experiencesImages/wild.png" class="img-timeLine">
+                                    <p class="timeline__blurb mt-3">
+                                        Formation en campus d'une durée de 5 mois. Diplome Développeur Web & Mobile équivalent BAC + 2 obtenu.
+                                        <br><br>
+                                        Parcours :
+                                        <br>
+                                        HTML / CSS / BOOTSTRAP / GIT / LINUX
+                                        <br>
+                                        PHP / SQL et les bonnes conventions de codage (MVC, PSR ...)
+                                        <br>
+                                        Symfony 4.2 et travail sur un projet dans un groupe de 5 en méthode agile.
+                                    </p>
+                                </a>
+                            </div>
                         </div>
 
-                        <div class="timeline__item experienceCard">
-                            <a href="http://www.france-isolation-gratuit.com/" target="_blank">
-                                <h3 class="timeline__title text-uppercase">france isolation</h3>
-                                <img alt="Site France Isolation David Gabriele" src="/assets/images/experiencesImages/france-isolation.png" class="img-timeLine">
-                                <p class="timeline__blurb mt-3">
-                                    Création d'un site vitrine représentant l'activité du client.
+                        <h2 id="before2018" class="timeline__item timeline__item--year dateExperience" onclick="experienceDate(this.id)">< 2018</h2>
 
-                                    Ce site a pour but de récolter des "leads" afin de les démarcher par la suite.
-                                    <br><br>
-                                    Technos utilisées :
+                        <div id="timeLinebefore2018" class="timeLineByDate d-none">
+                            <div class="timeline__item experienceCard">
+                                    <h3 class="timeline__title text-uppercase">Avant ma reconversion</h3>
+                                    <p class="timeline__blurb mt-3">
+                                        Passionné d'informatique depuis toujours, mes premières applications web ont été confectionnées dans les années 2000.
+                                    </p>
+                            </div>
 
-                                    HTML / CSS / PHP
-                                </p>
-                            </a>
-                        </div>
-
-                        <div class="timeline__item experienceCard">
-                            <a href="https://www.i-dpo.com/" target="_blank">
-                                <h3 class="timeline__title text-uppercase">Stage IDPO</h3>
-                                <img alt="Stage chez IDPO de David Gabriele" src="/assets/images/experiencesImages/idpo.png" class="img-timeLine">
-                                <p class="timeline__blurb mt-3">
-                                    Stage en entreprise d'une durée de 2 mois.
-
-                                    Secteur d'activité dans le domaine du RGPD, j'ai pu travailler sur le CRM de l'entreprise qui a
-                                    pour but de gérer la clientèle. Travail avec la collaboration d'un développeur plus expérimenté (à distance).
-                                    <br><br>
-                                    Technos utilisées :
-
-                                    SYMFONY 3.4
-                                </p>
-                            </a>
-                        </div>
-
-                        <h2 class="timeline__item timeline__item--year">2018</h2>
-
-                        <div class="timeline__item experienceCard">
-                            <a href="https://www.wildcodeschool.com/fr-FR" target="_blank">
-                                <h3 class="timeline__title text-uppercase">WILD CODE SCHOOL</h3>
-                                <img alt="Wild Code School" src="/assets/images/experiencesImages/wild.png" class="img-timeLine">
-                                <p class="timeline__blurb mt-3">
-                                    Formation en campus d'une durée de 5 mois. Diplome Développeur Web & Mobile équivalent BAC + 2 obtenu.
-                                    <br><br>
-                                    Parcours :
-                                    <br>
-                                    HTML / CSS / BOOTSTRAP / GIT / LINUX
-                                    <br>
-                                    PHP / SQL et les bonnes conventions de codage (MVC, PSR ...)
-                                    <br>
-                                    Symfony 4.2 et travail sur un projet dans un groupe de 5 en méthode agile.
-                                </p>
-                            </a>
-                        </div>
-
-                        <h2 class="timeline__item timeline__item--year">2003 à 2018</h2>
-
-                        <div class="timeline__item experienceCard">
-                                <h3 class="timeline__title text-uppercase">Avant ma reconversion</h3>
-                                <p class="timeline__blurb mt-3">
-                                    Passionné d'informatique depuis toujours, mes premières applications web ont été confectionnées dans les années 2000.
-                                </p>
-                        </div>
-
-                        <div class="timeline__item experienceCard">
-                                <h3 class="timeline__title text-uppercase">MONDE DE LA RESTAURATION</h3>
-                                <p class="timeline__blurb mt-3">
-                                    Serveur / Barman / Gérant en restauration
-                                </p>
+                            <div class="timeline__item experienceCard">
+                                    <h3 class="timeline__title text-uppercase">MONDE DE LA RESTAURATION</h3>
+                                    <p class="timeline__blurb mt-3">
+                                        Serveur / Barman / Gérant en restauration
+                                    </p>
+                            </div>
                         </div>
 
                     </div>
@@ -277,11 +295,11 @@
                     <div class="text">
                         <div class="row justify-content-center">
                         <p class="col-12text-center">
-                            <span class="word wisteria">SYMFONY</span>
-                            <span class="word belize">PHP</span>
-                            <span class="word pomegranate">JAVASCRIPT</span>
-                            <span class="word green">SQL</span>
-                            <span class="word midnight">CSS</span>
+                            <span class="word white">SYMFONY</span>
+                            <span class="word orange">PHP</span>
+                            <span class="word white">JAVASCRIPT</span>
+                            <span class="word orange">SQL</span>
+                            <span class="word white">CSS</span>
                         </p>
                         </div>
                     </div>
@@ -344,6 +362,7 @@
 <script rel="script" src="/assets/js/main.js"></script>
 <script rel="script" src="/assets/js/contactForm.js"></script>
 <script rel="script" src="/assets/js/competencesText.js"></script>
+<script rel="script" src="/assets/js/experiencesPage.js"></script>
 <script type="text/javascript">
     // Je récupère le captcha pour le comparer ensuite
     // ---------------------------->

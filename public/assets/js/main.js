@@ -32,7 +32,11 @@ function changePage(idItemMenu){
     // imageBackground.classList.add('animate__shakeX')
     setTimeout(function()
         {
-
+            // Je ferme tous les Time Line Date (=> d-none)
+            let timeLinesDate = document.getElementsByClassName('timeLineByDate')
+            for(let i = 0; i < timeLinesDate.length; i++){
+                timeLinesDate[i].classList.add('d-none')
+            }
             // I set Current Section for menu
             menuCurrentSection.classList.remove('menuCurrentSection')
             selectedSection.classList.add('menuCurrentSection')
