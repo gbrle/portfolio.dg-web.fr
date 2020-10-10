@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\DestructionSite;
+use App\Repository\DestructionSiteRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -80,5 +83,28 @@ class HomeController extends AbstractController
         }
         $this->session->set('captcha', $string);
         return $string;
+    }
+
+    /**
+     * @Route("/destruction_of_site", name="destruction_of_site")
+     */
+    public function descrutionSite(DestructionSiteRepository $destructionSiteRepository, EntityManagerInterface $manager)
+    {
+        // Je recupère mon entité
+        $destruction = $destructionSiteRepository->findOneBy(['id'=>1]);
+        // Je récuperere le nombre d'execution avant l'action
+        $nBreDestruction = $destructionSiteRepository->findOneBy(['id'=>1])->getExecution();
+
+        // J'ajoute mon execution
+        $destruction->setExecution($nBreDestruction += 1);
+        $manager->persist($destruction);
+        $manager->flush();
+
+        // Je récuperere le nombre d'execution après l'action
+        $nBreDestructionFinal = $destructionSiteRepository->findOneBy(['id'=>1])->getExecution();
+
+
+        return New Response($nBreDestructionFinal);
+
     }
 }

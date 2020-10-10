@@ -9,6 +9,10 @@ let fighterMoquerie = document.getElementById('fighterMoquerie');
 let fighterTaperGentillement = document.getElementById('fighterTaperGentillement');
 let fighterRafale = document.getElementById('fighterRafale');
 let fighterDetruire = document.getElementById('fighterDetruire');
+// Execution count Div
+let executionCountDiv = document.getElementById('executionCount')
+// Execution count Nb
+let executionCountNb = document.getElementById('executionCountNb')
 
 
 
@@ -110,6 +114,10 @@ document.addEventListener('keydown', (event) => {
 
             // TAPER DETRUIRE
             if (touche === 'c') {
+                ajaxPost('/destruction_of_site', 'empty', function (nBexeecution){
+                    executionCountNb.innerText = nBexeecution
+                    executionCountDiv.classList.remove('d-none')
+                })
                 fighterFixe.classList.add('d-none')
                 fighterDetruire.style.left = (posFighter-541) + 'px'
                 fighterDetruire.classList.remove('d-none')
