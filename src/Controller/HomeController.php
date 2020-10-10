@@ -2,11 +2,14 @@
 
 namespace App\Controller;
 
+use App\Entity\BlackListDestruction;
 use App\Entity\DestructionSite;
 use App\Repository\DestructionSiteRepository;
 use App\Service\mailerService;
 use Doctrine\ORM\EntityManagerInterface;
+use mysql_xdevapi\Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
@@ -89,30 +92,43 @@ class HomeController extends AbstractController
     /**
      * @Route("/destruction_of_site", name="destruction_of_site")
      */
-    public function descrutionSite(DestructionSiteRepository $destructionSiteRepository, EntityManagerInterface $manager, mailerService $mailer)
+    public function descrutionSite(Request $request, DestructionSiteRepository $destructionSiteRepository, EntityManagerInterface $manager, mailerService $mailer)
     {
-        // Je recupère mon entité
-        $destruction = $destructionSiteRepository->findOneBy(['id'=>1]);
-        // Je récuperere le nombre d'execution avant l'action
-        $nBreDestruction = $destructionSiteRepository->findOneBy(['id'=>1])->getExecution();
-
-        // J'ajoute mon execution
-        $destruction->setExecution($nBreDestruction += 1);
-        $manager->persist($destruction);
-        $manager->flush();
-
-        // Je récuperere le nombre d'execution après l'action
-        $nBreDestructionFinal = $destructionSiteRepository->findOneBy(['id'=>1])->getExecution();
-
-        // J'envois mon mail
-        $mailer->sendMail(
-            'Destruction Dg Web',
-            'Un utilisateur à réussit à détruire le site !! OOOOOOoooooo_O, c\'est le ' . $nBreDestructionFinal . ' ème ! INCROYABLE !!!',
-            "mailTemplate/mail.html.twig"
-        );
+        try {
+            // J'ajoute l'utilisateur en black list
+            $blackListUser = new BlackListDestruction();
+            $blackListUser->setIdentification($request->getClientIp());
 
 
-        return New Response($nBreDestructionFinal);
+
+            // Je recupère mon entité
+            $destruction = $destructionSiteRepository->findOneBy(['id'=>1]);
+            // Je récuperere le nombre d'execution avant l'action
+            $nBreDestruction = $destructionSiteRepository->findOneBy(['id'=>1])->getExecution();
+
+            // J'ajoute mon execution
+            $destruction->setExecution($nBreDestruction += 1);
+            $manager->persist($destruction);
+            $manager->persist($blackListUser);
+            $manager->flush();
+
+            // Je récuperere le nombre d'execution après l'action
+            $nBreDestructionFinal = $destructionSiteRepository->findOneBy(['id'=>1])->getExecution();
+
+            // J'envois mon mail
+            $mailer->sendMail(
+                'Destruction Dg Web',
+                'Un utilisateur à réussit à détruire le site !! OOOOOOoooooo_O, c\'est le ' . $nBreDestructionFinal . ' ème ! INCROYABLE !!!',
+                "mailTemplate/mail.html.twig"
+            );
+
+
+            return New Response('Tu es le ' . $nBreDestructionFinal . ' ème destructeur du site !! WOW ! O_o');
+        }catch (\Exception $e){
+
+            return New Response('Aimes-tu vraiment détruire mon site ? ! Ce n\'est pas la première fois !!! O_o');
+        }
+
 
     }
 }
