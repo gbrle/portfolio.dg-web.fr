@@ -122,8 +122,11 @@ class HomeController extends AbstractController
                 "mailTemplate/mail.html.twig"
             );
 
-
-            return New Response('Tu es le ' . $nBreDestructionFinal . ' ème destructeur du site !! WOW ! O_o');
+            if($nBreDestructionFinal === 1){
+                return New Response('Tu es le ' . $nBreDestructionFinal . 'er destructeur du site !! WOW ! O_o');
+            }   else {
+                return New Response('Tu es le ' . $nBreDestructionFinal . 'ème destructeurs du site !! WOW ! O_o');
+            }
         }catch (\Exception $e){
 
             return New Response('Aimes-tu vraiment détruire mon site ? ! Ce n\'est pas la première fois !!! O_o');
