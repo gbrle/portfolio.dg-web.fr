@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\DestructionSite;
 use App\Repository\DestructionSiteRepository;
+use App\Service\mailerService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -88,7 +89,7 @@ class HomeController extends AbstractController
     /**
      * @Route("/destruction_of_site", name="destruction_of_site")
      */
-    public function descrutionSite(DestructionSiteRepository $destructionSiteRepository, EntityManagerInterface $manager)
+    public function descrutionSite(DestructionSiteRepository $destructionSiteRepository, EntityManagerInterface $manager, mailerService $mailer)
     {
         // Je recupère mon entité
         $destruction = $destructionSiteRepository->findOneBy(['id'=>1]);
@@ -102,6 +103,13 @@ class HomeController extends AbstractController
 
         // Je récuperere le nombre d'execution après l'action
         $nBreDestructionFinal = $destructionSiteRepository->findOneBy(['id'=>1])->getExecution();
+
+        // J'envois mon mail
+        $mailer->sendMail(
+            'Destruction Dg Web',
+            'Un utilisateur à réussit à détruire le site !! OOOOOOoooooo_O, c\'est le ' . $nBreDestructionFinal . ' ème ! INCROYABLE !!!',
+            "mailTemplate/mail.html.twig"
+        );
 
 
         return New Response($nBreDestructionFinal);
