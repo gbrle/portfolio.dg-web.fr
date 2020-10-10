@@ -116,16 +116,25 @@ class HomeController extends AbstractController
             $nBreDestructionFinal = $destructionSiteRepository->findOneBy(['id'=>1])->getExecution();
 
             // J'envois mon mail
-            $mailer->sendMail(
-                'Destruction Dg Web',
-                'Un utilisateur à réussit à détruire le site !! OOOOOOoooooo_O, c\'est le ' . $nBreDestructionFinal . ' ème ! INCROYABLE !!!',
-                "mailTemplate/mail.html.twig"
-            );
+            if($nBreDestructionFinal === 1){
+                $mailer->sendMail(
+                    'Destruction Dg Web',
+                    'Un utilisateur à réussit à détruire le site !! OOOOOOoooooo_O, c\'est le ' . $nBreDestructionFinal . 'er ! INCROYABLE !!!',
+                    "mailTemplate/mail.html.twig"
+                );
+            }   else{
+                $mailer->sendMail(
+                    'Destruction Dg Web',
+                    'Un utilisateur à réussit à détruire le site !! OOOOOOoooooo_O, c\'est le ' . $nBreDestructionFinal . 'ème ! INCROYABLE !!!',
+                    "mailTemplate/mail.html.twig"
+                );
+            }
+
 
             if($nBreDestructionFinal === 1){
                 return New Response('Tu es le ' . $nBreDestructionFinal . 'er destructeur du site !! WOW ! O_o');
             }   else {
-                return New Response('Tu es le ' . $nBreDestructionFinal . 'ème destructeurs du site !! WOW ! O_o');
+                return New Response('Tu es le ' . $nBreDestructionFinal . 'ème destructeur du site !! WOW ! O_o');
             }
         }catch (\Exception $e){
 
