@@ -302,3 +302,10 @@ Hover Text Orange
         position: absolute;
     }
 }
+
+.backToTheSite{
+    color: white;
+}
+.backToTheSite:hover{
+    color: #cb875f;
+}
