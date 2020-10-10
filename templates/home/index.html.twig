@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="/assets/css/counterTextArea.css">
     <link rel="stylesheet" href="/assets/css/experiences.css">
     <link rel="stylesheet" href="/assets/css/competencesText.css">
+    <link rel="stylesheet" href="/assets/css/streetFighter.css">
 
 </head>
 <body>
@@ -58,7 +59,7 @@
 
 
  <!-- Content Page -->
-    <div class="content container-fluid p-0 p-md-5">
+    <div id="content" class="content container-fluid p-0 p-md-5">
         <img alt="David Gabriele background" id="imageBackground" class="backgroundHome animate__animated animate__bounceInLeft w-50" src="/assets/images/developpeur-david-gariele-background.png">
         <img alt="burger" id="burgerMenu" src="/assets/images/burger.png" class="burgerMenu animate__animated" onclick="displayMenu()">
 
@@ -351,6 +352,63 @@
     </div>
     <!-- End Content Page -->
 
+<!-- STREET FIGHTER TRIP -->
+<h2 id="introDgFighter" class="introDgFighter d-none">DG FIGHTER</h2>
+<!-- Commandes -->
+<!-- Button Dg Fighter modal -->
+<button type="button" id="buttonGuideStreetFighter" class="btn btn-danger d-none animate__animated animate__backInLeft" data-toggle="modal" data-target="#modalStreetFighterGuide" style="position: fixed; z-index: 100030; top: 20px; right: 20px">
+    Guide des touches
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modalStreetFighterGuide" tabindex="-1" role="dialog" aria-labelledby="modalStreetFighterGuide" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="bitterFont display-5 text-light text-uppercase text-center mr-5">
+                    <span class="colorOrange">DG FIGHTER II </span>
+                </h1>
+                <br>
+                <h5 class="modal-title" id="modalStreetFighterGuide"><span class="badge badge-danger ml-5"> GUIDE DES TOUCHES</span></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="deplacement col-6">
+                        <h5 class="font-weight-bold">Déplacements</h5>
+                        <span class="badge badge-danger">Q</span> : Gauche
+                        <br>
+                        <span class="badge badge-danger">D</span> : Droite
+                        <br>
+                        <span class="badge badge-danger">ESPACE</span> : Sauter
+                    </div>
+                    <div class="hits col-6">
+                        <h5 class="font-weight-bold">Coups spéciaux</h5>
+                        <span class="badge badge-danger">T</span> : Se moquer du portfolio
+                        <br>
+                        <span class="badge badge-danger">R</span> : Taper gentillement
+                        <br>
+                        <span class="badge badge-danger">E</span> : Rafale
+                        <br>
+                        <span class="badge badge-danger">C</span> : Détruire le site O_o'
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn text-danger font-weight-bold" data-dismiss="modal">J'ESSAYE</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- apparition -->
+<img id="fighterFixe" class="d-none fighterFixe apparition" src="/assets/images/streetFighterTrip/muaiFixe2.gif">
+<img id="fighterMoquerie" class="d-none fighterMoquerie" src="/assets/images/streetFighterTrip/fighterMoquerie.gif">
+<img id="fighterTaperGentillement" class="d-none fighterTaperGentillement" src="/assets/images/streetFighterTrip/taperGentillement.gif">
+<img id="fighterRafale" class="d-none fighterRafale" src="/assets/images/streetFighterTrip/rafale.gif">
+<img id="fighterDetruire" class="d-none fighterDetruire" src="/assets/images/streetFighterTrip/detruire.gif">
 
 
     <!-- Optional JavaScript -->
@@ -363,6 +421,7 @@
 <script rel="script" src="/assets/js/contactForm.js"></script>
 <script rel="script" src="/assets/js/competencesText.js"></script>
 <script rel="script" src="/assets/js/experiencesPage.js"></script>
+<script rel="script" src="/assets/js/streetFighter.js"></script>
 <script type="text/javascript">
     // Je récupère le captcha pour le comparer ensuite
     // ---------------------------->

@@ -1,0 +1,264 @@
+/* INTRO DG FUGHTER */
+.introDgFighter{
+    border-radius: 60px;
+    background-color: white;
+    color: black;
+    font-size: 10vw;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+}
+/* INTRO ANIMATION */
+.startIntro{
+    -webkit-animation: introAnimation 5s;
+}
+@-webkit-keyframes introAnimation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* LES FIGHTERS */
+.fighterFixe{
+    width: 300px;
+    z-index: 1000000;
+    position: fixed;
+    left: 0;
+    bottom: 0vh;
+}
+
+.fighterMoquerie{
+    width: 193px;
+    z-index: 1000000;
+    position: fixed;
+    left: 0;
+    bottom: 0vh;
+}
+
+.fighterTaperGentillement{
+    width: 506px;
+    z-index: 1000000;
+    position: fixed;
+    left: 0;
+    bottom: 0vh;
+}
+.fighterRafale{
+    width: 800px;
+    z-index: 1000000;
+    position: fixed;
+    left: 0;
+    bottom: 0vh;
+}
+.fighterDetruire{
+    width: 1381px;
+    z-index: 1000000;
+    position: fixed;
+    left: 0;
+    bottom: 0vh;
+}
+
+/* APPARITION FIGHTER QUAND ON LANCE */
+.apparition{
+    -webkit-animation: apparitionAnimation 0.5s;
+}
+@-webkit-keyframes apparitionAnimation {
+    0% {
+        bottom: 100vh;
+    }
+    100% {
+        bottom: 0vh;
+    }
+}
+
+
+/* SAUT */
+.saut{
+    -webkit-animation: sautAnimation 0.1s;
+}
+@-webkit-keyframes sautAnimation {
+    0% {
+        top: 48px;
+    }
+    50% {
+        top: 1px;
+    }
+    100% {
+        top: 48px;
+    }
+}
+
+
+/* DESCTRUCTION ANIMATION */
+.startDestruction{
+    -webkit-animation: destructionAnimation 10s;
+}
+@-webkit-keyframes destructionAnimation {
+    0% {
+        width: 100px;
+        background-color: red;
+        opacity: 0.1;
+    }
+    3% {
+        width: 309px;
+        background-color: yellow;
+        opacity: 0.3;
+    }
+    6% {
+        width: 2px;
+        background-color: red;
+        opacity: 0.5;
+    }
+    9% {
+        width: 212px;
+        background-color: yellow;
+        opacity: 0.6;
+    }
+    12% {
+        width: 900px;
+        background-color: red;
+        opacity: 0.8;
+    }
+    15% {
+        width: 314px;
+        background-color: yellow;
+        opacity: 1;
+    }
+    18% {
+        width: 1px;
+        background-color: red;
+        opacity: 0.8;
+    }
+    21% {
+        width: 765px;
+        background-color: yellow;
+        opacity: 0.6;
+    }
+    24% {
+        background-color: red;
+        opacity: 0.4;
+    }
+    27% {
+        background-color: yellow;
+        opacity: 0.2;
+    }
+    30% {
+        background-color: red;
+        opacity: 0;
+    }
+    33% {
+        background-color: yellow;
+        opacity: 0.2;
+    }
+    36% {
+        background-color: red;
+        opacity: 0.4;
+    }
+    39% {
+        background-color: yellow;
+        opacity: 0.6;
+    }
+    42% {
+        background-color: red;
+        opacity: 0.8;
+    }
+    45% {
+        background-color: yellow;
+        opacity: 1;
+    }
+    48% {
+        background-color: red;
+        opacity: 0.8;
+    }
+    51% {
+        background-color: yellow;
+        opacity: 0.6;
+    }
+    54% {
+        background-color: red;
+        opacity: 0.4;
+    }
+    57% {
+        background-color: yellow;
+        opacity: 0.2;
+    }
+    60% {
+        background-color: red;
+        opacity: 0;
+    }
+    63% {
+        background-color: yellow;
+        opacity: 0.2;
+    }
+    66% {
+        background-color: red;
+        opacity: 0.4;
+    }
+    69% {
+        height: 14px;
+        background-color: yellow;
+        opacity: 0.6;
+    }
+    72% {
+        height: 143px;
+        background-color: red;
+        opacity: 0.8;
+    }
+    75% {
+        height: 1124px;
+        background-color: yellow;
+        opacity: 1;
+    }
+    78% {
+        height: 142px;
+        background-color: red;
+        opacity: 0.8;
+    }
+    81% {
+        height: 11124px;
+        background-color: yellow;
+        opacity: 0.6;
+    }
+    84% {
+        height: 1444px;
+        background-color: red;
+        opacity: 0.4;
+    }
+    87% {
+        height: 14px;
+        background-color: yellow;
+        opacity: 0.2;
+    }
+    90% {
+        height: 1px;
+        background-color: red;
+        opacity: 0;
+    }
+    93% {
+        height: 1444px;
+        background-color: yellow;
+        opacity: 0.2;
+    }
+    96% {
+        height: 133px;
+        background-color: red;
+        opacity: 0.4;
+    }
+    100% {
+        height: 111px;
+        background-color: yellow;
+        opacity: 0.6;
+    }
+}
